@@ -1,10 +1,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 
-RUN groupadd -g 2000 dotnet\
-    && useradd -m -u 2000 -g 2000 dotnet
+# RUN groupadd -g 2000 dotnet\
+#     && useradd -m -u 2000 -g 2000 dotnet
 
-USER dotnet 
+# USER dotnet 
 
 RUN apt-get update
 RUN curl -sL https://deb.nodesource.com/setup_16.x  | bash -

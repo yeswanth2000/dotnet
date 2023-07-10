@@ -1,1 +1,19 @@
+version: '3.9'
+
+services:
+  app:
+    build: ./
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5000:80
+    redis:
+      image: redis
+      ports:
+       - 6379:6379
+    mysql:
+      image: mysql
+    volumes:
+      - ./app:/app
+
 
