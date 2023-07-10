@@ -1,6 +1,8 @@
 version: '3.9'
 
 services:
+volumes:
+      - 4200:/Users/venkatramanareddy/desktop/git/dotnet-1/docker-compose.yml
   app:
     build:
       context: ./
