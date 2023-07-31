@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yeswanthdotnet 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yeswanthdotnet
+  template:
+    metadata:
+      labels:
+        app: yeswanthdotnet 
+    spec:
+      containers:
+        - name: yeswanthdotnet 
+          image: titron.azurecr.io/yeswanthdotnet
+          ports:
+          - containerPort: 5000
